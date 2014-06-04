@@ -2,14 +2,14 @@
  // All this logic will automatically be available in application.js.
  // You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready(function() {
-  var petsList = new List('pet-list', options, values);
+  var petsList = new List('pet-list', options);
 
-  petsList.add({
-    name: "bill",
-    age: 'young',
-    size: 'l',
-    species: 'dog'
-  })
+  // petsList.add({
+  //   name: "bill",
+  //   age: 'young',
+  //   size: 'l',
+  //   species: 'dog'
+  // })
 })
 
 var options = {
@@ -17,10 +17,10 @@ var options = {
   item: '<li><h3 class="name"></h3><p class="age"></p><p class="size"></p><p class="species"></p></li>'
 };
 
-var values = [
-    { name: 'Pickles', age:'young', size: 's', species: 'cat' }
-    , { name: 'Noodles', age:'old', size: 'm', species: 'dog' }
-];
+// var values = [
+//     { name: 'Pickles', age:'young', size: 's', species: 'cat' }
+//     , { name: 'Noodles', age:'old', size: 'm', species: 'dog' }
+// ];
 
 
 

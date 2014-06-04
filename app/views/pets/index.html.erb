@@ -1,68 +1,24 @@
 <h1>Pets</h1>
+total <%= @pets.size %> pets found
 	<div id="pet-list">
 	    <input class="search" placeholder="Search" />
 	    <button class="sort" data-sort="name">
 	      Sort by name
 	    </button>
+	    <button class="sort" data-sort="age">
+	      Sort by age
+	    </button>
 
-	    <ul class="list"></ul>
+    <ul class="list">
+			<%= @pets.each_with_index do |pet, index| %>
+				<ul class="inline-row">
+					<%= index %>
+					<li class="name">	 <%= pet.name %> </li>
+					<li class="age"> <%= pet.age %> </li>
+				</ul>
+			<% end %>
+		</ul>
 
 	</div>
-
-<%= @pets.each do |pet| %>
-			pet.name
-<% end %>
-total <%= @pets.size %> pets found
-	<ul class="list-headers">
-			<li>name</li>
-			<li>age</li>
-			<li>size</li>
-			<li>gender</li>
-			<li>size</li>
-			<li>species</li>
-			<li>status</li>
-			<li>organization_name</li>
-			<li>is_housebroken</li>
-			<li>is_housetrained</li>
-			<li>is_hypoallergenic</li>
-			<li>tail</li>
-			<li>color</li>
-			<li>breed</li>
-			<li>hair_length</li>
-			<li>street_address</li>
-			<li>city</li>
-			<li>state</li>
-			<li>zipcode</li>
-			<li>phone</li>
-			<li>fax</li>
-			<li>email</li>
-	</ul>
-	<ul class="row">
-		<% @pets.each do |pet| %>
-			<li class="column"><%= pet.name %></li>
-			<li class="column"><%= pet.age %></li>
-			<li class="column"><%= pet.size %></li>
-			<li class="column"><%= pet.gender %> </li>
-			<li class="column"><%= pet.size %> </li>
-			<li class="column"><%= pet.species %> </li>
-			<li class="column"><%= pet.status   %> </li>
-			<li class="column"><%= pet.organization_name %> </li>
-			<li class="column"><%= pet.is_housebroken %> </li>
-			<li class="column"><%= pet.is_housetrained %> </li>
-			<li class="column"><%= pet.is_hypoallergenic %> </li>
-			<li class="column"><%= pet.tail %> </li>
-			<li class="column"><%= pet.color %> </li>
-			<li class="column"><%= pet.primary_breed %> - <%= pet.secondary_breed %></li>
-			<li class="column"><%= pet.hair_length %> </li>
-			<li class="column"><%= pet.contact_street_address %> </li>
-			<li class="column"><%= pet.contact_city %> </li>
-			<li class="column"><%= pet.contact_state %> </li>
-			<li class="column"><%= pet.contact_zipcode %> </li>
-			<li class="column"><%= pet.contact_phone %> </li>
-			<li class="column"><%= pet.contact_fax %> </li>
-			<li class="column"><%= pet.contact_email %> </li>
-			<li class="column"><%= link_to 'profile', pet %></li>
-		<% end %>
-	</ul>
 
 <%= link_to 'New Pet', new_pet_path %>
