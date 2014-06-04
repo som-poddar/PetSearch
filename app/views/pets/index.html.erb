@@ -1,15 +1,12 @@
 <div id="pet-list">
+    <input class="search" placeholder="Search" />
+    <button class="sort" data-sort="name">
+      Sort by name
+    </button>
+
     <ul class="list"></ul>
-</div>
 
-<div style="display:none;">
-    <!-- A template element is needed when list is empty, TODO: needs a better solution -->
-    <li id="pet-item">
-       <h3 class="name"></h3>
-       <p class="age"></p>
-    </li>
 </div>
-
 
 <h1>Pets</h1>
 total <%= @pets.size %> pets found
@@ -76,3 +73,23 @@ total <%= @pets.size %> pets found
 <br>
 
 <%= link_to 'New Pet', new_pet_path %>
+
+
+<script>
+var options = {
+  valueNames: ['name'],
+  item: '<li><h3 class="name"></h3><p class="born"></p></li>'
+};
+
+var values = [
+    { name: 'Pickles', age:'young' }
+    , { name: 'Noodles', age:'old' }
+];
+
+var petsList = new List('pet-list', options, values);
+
+petsList.add({
+    name: "Gustaf Lindqvist",
+    age: 'old'
+  })
+</script>
