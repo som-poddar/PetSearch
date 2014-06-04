@@ -8,13 +8,37 @@ total <%= @pets.size %> pets found
 	    <button class="sort" data-sort="age">
 	      Sort by age
 	    </button>
-
+	    <button class="sort" data-sort="size">
+	      Sort by size
+	    </button>
+	    <button class="sort" data-sort="species">
+	      Sort by species
+	    </button>
     <ul class="list">
 			<%= @pets.each_with_index do |pet, index| %>
 				<ul class="inline-row">
 					<%= index %>
 					<li class="name">	 <%= pet.name %> </li>
 					<li class="age"> <%= pet.age %> </li>
+					<li class="size"> <%= pet.size %> </li>
+					<li class="species"> <%= pet.species %> </li>
+					<li class=""> <%= pet.status %> </li>
+					<li class=""> <%= pet.organization_name%> </li>
+					<li class=""> <%= pet.is_housebroken %> </li>
+					<li class=""> <%= pet.is_housetrained %> </li>
+					<li class=""> <%= pet.is_hypoallergenic %> </li>
+					<li class=""> <%= pet.tail %> </li>
+					<li class=""> <%= pet.color %> </li>
+					<li class=""> <%= pet.primary_breed %> - <%= pet.secondary_breed %> </li>
+					<li class=""> <%= pet.hair_length %> </li>
+					<li class=""> <%= pet.contact_street_address %> </li>
+					<li class=""> <%= pet.contact_city %> </li>
+					<li class=""> <%= pet.contact_state %> </li>
+					<li class=""> <%= pet.contact_zipcode %> </li>
+					<li class=""> <%= pet.contact_phone %> </li>
+					<li class=""> <%= pet.contact_fax %> </li>
+					<li class=""> <%= pet.contact_email %> </li>
+					<li class=""> link_to 'profile', pet </li>
 				</ul>
 			<% end %>
 		</ul>
@@ -22,3 +46,4 @@ total <%= @pets.size %> pets found
 	</div>
 
 <%= link_to 'New Pet', new_pet_path %>
+
