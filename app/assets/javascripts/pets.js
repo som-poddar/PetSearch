@@ -2,3 +2,13 @@
  // All this logic will automatically be available in application.js.
  // You can use CoffeeScript in this file: http://coffeescript.org/
 
+var options = {
+    item: 'pet-item'
+};
+
+var values = [
+    { name: 'Pickles', age:'young' }
+    , { name: 'Noodles', age:'old' }
+];
+
+var petsList = new List('pet-list', options, values);
