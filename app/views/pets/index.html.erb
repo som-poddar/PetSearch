@@ -1,3 +1,16 @@
+<div id="pet-list">
+    <ul class="list"></ul>
+</div>
+
+<div style="display:none;">
+    <!-- A template element is needed when list is empty, TODO: needs a better solution -->
+    <li id="pet-item">
+       <h3 class="name"></h3>
+       <p class="age"></p>
+    </li>
+</div>
+
+
 <h1>Pets</h1>
 total <%= @pets.size %> pets found
 <table>
@@ -16,7 +29,7 @@ total <%= @pets.size %> pets found
 			<th>is_hypoallergenic</th>
 			<th>tail</th>
 			<th>color</th>
-			<th>breed</th>			
+			<th>breed</th>
 			<th>hair_length</th>
 			<th>street_address</th>
 			<th>city</th>
@@ -24,7 +37,7 @@ total <%= @pets.size %> pets found
 			<th>zipcode</th>
 			<th>phone</th>
 			<th>fax</th>
-			<th>email</th>		
+			<th>email</th>
 		</tr>
 	</thead>
 
@@ -44,7 +57,7 @@ total <%= @pets.size %> pets found
 			<td><%= pet.is_hypoallergenic %> </td>
 			<td><%= pet.tail %> </td>
 			<td><%= pet.color %> </td>
-			<td><%= pet.primary_breed %> - <%= pet.secondary_breed %></td>			
+			<td><%= pet.primary_breed %> - <%= pet.secondary_breed %></td>
 			<td><%= pet.hair_length %> </td>
 			<td><%= pet.contact_street_address %> </td>
 			<td><%= pet.contact_city %> </td>
