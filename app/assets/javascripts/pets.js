@@ -1,23 +1,28 @@
  // Place all the behaviors and hooks related to the matching controller here.
  // All this logic will automatically be available in application.js.
  // You can use CoffeeScript in this file: http://coffeescript.org/
+$(document).ready(function() {
+  var petsList = new List('pet-list', options, values);
+
+  petsList.add({
+    name: "bill",
+    age: 'young',
+    size: 'l',
+    species: 'dog'
+  })
+})
 
 var options = {
-  valueNames: ['name'],
-  item: '<li><h3 class="name"></h3><p class="born"></p></li>'
+  valueNames: [ 'name', 'age', 'size', 'species' ],
+  item: '<li><h3 class="name"></h3><p class="age"></p><p class="size"></p><p class="species"></p></li>'
 };
 
 var values = [
-    { name: 'Pickles', age:'young' }
-    , { name: 'Noodles', age:'old' }
+    { name: 'Pickles', age:'young', size: 's', species: 'cat' }
+    , { name: 'Noodles', age:'old', size: 'm', species: 'dog' }
 ];
 
-var petsList = new List('pet-list', options, values);
 
-petsList.add({
-    name: "Gustaf Lindqvist",
-    age: 'old'
-  })
 
 // var options = {
 //   valueNames: [ 'name', 'born' ],

@@ -73,23 +73,3 @@ total <%= @pets.size %> pets found
 <br>
 
 <%= link_to 'New Pet', new_pet_path %>
-
-
-<script>
-var options = {
-  valueNames: ['name'],
-  item: '<li><h3 class="name"></h3><p class="born"></p></li>'
-};
-
-var values = [
-    { name: 'Pickles', age:'young' }
-    , { name: 'Noodles', age:'old' }
-];
-
-var petsList = new List('pet-list', options, values);
-
-petsList.add({
-    name: "Gustaf Lindqvist",
-    age: 'old'
-  })
-</script>
