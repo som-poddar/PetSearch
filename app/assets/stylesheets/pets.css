@@ -65,30 +65,24 @@ button {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 610px;
+  height: 550px;
   margin: 4px;
   padding: 0px;
   position: relative;
   top: 0;
-  width: 24.20%;
+  width: 250px;
   vertical-align: top;
 }
 .pet-entry li h3 {
   font-size: 1.25em;
   font-weight: 200;
 }
-.pet-entry li {
-  display: block;
-  margin: 0px;
-  padding: 0px;
-  word-wrap: normal;
-  width: 100%;
-}
 
 #profile {
   display: block;
-  height: 200px;
-  margin: 0px auto;
+  height: 170px;
+  overflow: hidden;
+  padding: 0px;
   width: 100%;
 }
 
@@ -97,6 +91,15 @@ button {
   margin: 0 auto;
   width: 100%;
 }
+
+.pet-entry li {
+  display: block;
+  margin: 0px;
+  padding: 2px 0px 0px 10px;
+  word-wrap: normal;
+  width: 100%;
+}
+
 
 .profile-page a{
   background-color: #232323;

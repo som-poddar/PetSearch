@@ -22,7 +22,6 @@
   <ul class="list">
 		<%= @pets.each do |pet| %>
 			<ul class="pet-entry">
-				<li>
 					<div id="profile">
 						<% if pet.species == "Cat" %>
 							<%= image_tag "cat-profile.jpg" %>
@@ -30,7 +29,6 @@
 							<%= image_tag "puppy-profile.jpg" %>
 						<% end %>
 					</div>
-				</li>
 				<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
 				<li class="age">Age: <%= pet.age %> </li>
 				<li class="size">Size: <%= pet.size %> </li>
@@ -45,7 +43,7 @@
 				<li class=""> Hair: <%= pet.hair_length %> </li>
 				<li class=""> City: <%= pet.contact_city %> </li>
 
-				<li class="profile-page"><%= link_to 'View Complete Profile', pet %> </li>
+				<div class="profile-page"><%= link_to 'View Complete Profile', pet %> </div>
 			</ul>
 		<% end %>
 	</ul>
