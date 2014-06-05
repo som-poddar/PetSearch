@@ -2,13 +2,30 @@
 	<div class="list-tools">
 		<h1>Find Your New Best Friend</h1>
 		<div class="tools">
-	    <input type="radio" name="age" value="Young">Young<br>
-	    <input type="radio" name="age" value="Adult">Adult<br>
-	    <input type="radio" name="age" value="Senior">Senior<br>
-	    <input class="search" placeholder="Search" />
-	    <br>
-			<p>Total <%= @pets.size %> pets found!</p>
-
+		  <input class="search" placeholder="Search" /><br>
+			<span class="section">
+		    <input type="radio" id="radio1" name="age" value="Young">
+		    <label for="radio1">Young</label>
+		    <input type="radio" id="radio2" name="age" value="Adult">
+		    <label for="radio2">Adult</label>
+		    <input type="radio" id="radio3" name="age" value="Senior">
+		    <label for="radio3">Senior</label>
+			</span>
+	    <span class="section">
+		    <input type="radio" id="radio4" name="size" value="Small">
+		    <label for="radio3">Small</label>
+		    <input type="radio" id="radio5" name="size" value="M">
+		    <label for="radio3">Medium</label>
+		    <input type="radio" id="radio6" name="size" value="L">
+		    <label for="radio3">Large</label>
+    	</span>
+    	<span class="section">
+		    <input type="radio" id="radio7" name="species" value="Dog">
+		    <label for="radio3">Cat</label>
+		    <input type="radio" id="radio8" name="species" value="Cat">
+		    <label for="radio3">Dog</label>
+		  </span>
+<br>
 	    <button class="sort" data-sort="name">
 	      Sort by name
 	    </button>
