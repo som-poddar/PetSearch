@@ -1,18 +1,25 @@
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
- }
-
- body {
+body {
   font-family: "Open Sans", sans-serif;
   max-width: 2000px;
+  margin: 0 auto;
+  padding: 0;
  }
 
  #pet-list {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 200;
   margin: 2px auto;
   padding: 0;
-  width: 1200px;
+  width: 85%;
+}
+
+#pet-list p a{
+  background-color: #232323;
+  color: white;
+  font-size: 1.25em;
+  font-weight: 200;
+  margin: 5px auto;
+  padding: 10px;
 }
 
 .list-tools {
@@ -42,12 +49,13 @@ button {
   background-color: white;
   height: 50px;
   margin: 5px auto;
+  width: 13%;
 }
 
 .list {
-  background-color: #232323;
   display: inline-block;
   margin: 12px auto;
+  padding-left: 15px;
   padding: 2px;
   max-height: 10000px;
   width: 100%;
@@ -57,34 +65,56 @@ button {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 600px;
-  margin: 6px auto;
-  padding: 2px;
+  height: 610px;
+  margin: 4px;
+  padding: 0px;
   position: relative;
   top: 0;
-  width: 24.5%;
+  width: 24.20%;
   vertical-align: top;
 }
-
+.pet-entry li h3 {
+  font-size: 1.25em;
+  font-weight: 200;
+}
 .pet-entry li {
   display: block;
-  margin: 2px;
-  padding: 2px;
+  margin: 0px;
+  padding: 0px;
   word-wrap: normal;
   width: 100%;
 }
 
 #profile {
-  background-color: black;
   display: block;
-  height: 165px;
-  margin: 2px auto;
-  width: 210px;
+  height: 200px;
+  margin: 0px auto;
+  width: 100%;
 }
 
 #profile img {
   display: block;
   margin: 0 auto;
-  padding-top: 2px;
-  width: 200px;
+  width: 100%;
+}
+
+.profile-page a{
+  background-color: #232323;
+  color: white;
+  display: block;
+  font-size: 1.25em;
+  font-weight: 200;
+  height: 50px;
+  padding: 15px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.profile-page a:hover {
+  background-color: #CCCCCC;
+  color: #232323;
+  text-decoration: none;
+
 }

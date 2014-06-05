@@ -1,11 +1,10 @@
 <div id="pet-list">
 	<div class="list-tools">
-		<h1>Pets</h1>
-		<p>total <%= @pets.size %> pets found</p>
-		<p><%= link_to 'New Pet', new_pet_path %></p>
+		<h1>Find Your New Best Friend</h1>
 		<div class="tools">
 	    <input class="search" placeholder="Search" />
 	    <br>
+			<p>Total <%= @pets.size %> pets found!</p>
 	    <button class="sort" data-sort="name">
 	      Sort by name
 	    </button>
@@ -37,7 +36,7 @@
 				<li class="size">Size: <%= pet.size %> </li>
 				<li class="species">Species: <%= pet.species %> </li>
 				<li class=""> Status: <%= pet.status %> </li>
-				<li class=""> Org: <%= pet.organization_name%> </li>
+				<li class=""> Organization: <%= pet.organization_name%> </li>
 				<li class=""> Housebroken? <%= pet.is_housebroken %> </li>
 				<li class=""> Housetrained? <%= pet.is_housetrained %> </li>
 				<li class=""> Hypoallergenic? <%= pet.is_hypoallergenic %> </li>
@@ -46,10 +45,11 @@
 				<li class=""> Hair: <%= pet.hair_length %> </li>
 				<li class=""> City: <%= pet.contact_city %> </li>
 
-				<li class=""><%= link_to 'profile', pet %> </li>
+				<li class="profile-page"><%= link_to 'View Complete Profile', pet %> </li>
 			</ul>
 		<% end %>
 	</ul>
+	<p><%= link_to 'Add a New Pet', new_pet_path %></p>
 </div>
 
 
