@@ -1,0 +1,23 @@
+<header id="header">
+  <div class="header-holder">
+    <div class="header-frame">
+      <div class="header-info">
+        <strong class="logo"><%= link_to root_path %></strong>
+        <div class="social-networks">
+          <strong class="title">Sniff Us Out</strong>
+          <ul>
+            <li class="facebook"><%= link_to "Facebook", "http://www.facebook.com/petstablished" %></li>
+            <li class="twitter"><%= link_to "Twitter", "http://www.twitter.com/petstablished" %></li>
+            <li class="instagram"><%= link_to "Instagram", "http://www.instagram.com/petstablished" %></li>
+          </ul>
+        </div>
+      </div>
+      <h1 style="text-shadow:1px 1px 6px black">Petstablished!</h1><br>
+      <div class="btn-area">
+        <%= link_to "Sign Up", "http://www.petstablished.com/signups/new", class: "btn btn-demo" %>
+        <%= link_to "Newsletter", "http://www.petstablished.com/newsletters/new", class: "btn btn-demo" %>
+      </div>
+    </div>
+  </div>
+  <%= image_tag "header-bg.jpg", class: "main-img" %>
+</header>
