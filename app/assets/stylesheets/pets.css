@@ -9,6 +9,7 @@
  }
 
  body {
+  font-family: "Open Sans", sans-serif;
   max-width: 2000px;
  }
 
@@ -21,7 +22,25 @@
 
 .tools {
   display: inline-block;
-  width: 100%;
+  float: left;
+  padding-left: 15px;
+  width: 33%;
+}
+
+.search {
+  font-size: 1.5em;
+  font-weight: 200;
+  height: 50px ;
+  margin: 5px auto;
+  padding: 15px;
+  width: 80%;
+}
+
+button {
+  background-color: white;
+  height: 50px;
+  margin: 5px auto;
+  width: 100px;
 }
 
 .list {
