@@ -8,5 +8,9 @@ $(document).ready(function() {
 
 var options = {
   valueNames: [ 'name', 'age', 'size', 'species' ],
+  page: 25,
+      plugins: [
+        ListPagination({})
+      ]
 };
 
