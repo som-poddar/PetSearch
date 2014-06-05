@@ -44,5 +44,8 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'listjs-rails'
-gem 'faker'
+group :development, :test do
+  gem 'listjs-rails'
+  gem 'faker'
+  gem 'cool_faker'
+end

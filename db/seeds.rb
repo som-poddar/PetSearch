@@ -38,6 +38,6 @@ def getSpecies
 	end
 end
 
-175.times do
-	Pet.create(name: Faker::Name.name, age: getAge, gender: getGender, size: getSize, description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.", species: getSpecies, organization_name: "Animal Welfare SPCA", is_housebroken: "Y", is_housetrained: "Y", is_hypoallergenic: "Y", color: "Black", primary_breed: "Shiba", secondary_breed: "Inu", hair_length: "Medium", contact_street_address: "132 Main St", contact_city: "Louisville", contact_state: "KY", contact_zipcode: "40221", contact_phone: "(855)789-0987", contact_fax: "(855)789-0987", contact_email: "someemail@company.com", address: "123 Main St, Louisville, KY, 40221")
+2000.times do
+	Pet.create(name: CoolFaker::Character.name, age: getAge, gender: getGender, size: getSize, description: CoolFaker::Team.slogan, species: getSpecies, organization_name: CoolFaker::Team.name, is_housebroken: "Y", is_housetrained: "Y", is_hypoallergenic: "Y", color: "Black", primary_breed: "Shiba", secondary_breed: "Inu", hair_length: "Medium", contact_street_address: Faker::Address.street_address, contact_city: Faker::Address.city, contact_state: Faker::Address.state_abbr, contact_zipcode: Faker::Address.zip, contact_phone: Faker::PhoneNumber.phone_number, contact_fax: Faker::PhoneNumber.phone_number, contact_email: Faker::Internet.email, address: Faker::Address.street_address)
 end
