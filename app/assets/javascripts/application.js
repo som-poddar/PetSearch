@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require list
+//= require list.pagination
+//= require list.fuzzysearch
 //= require_tree .
+
