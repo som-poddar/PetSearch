@@ -1,11 +1,27 @@
-// Place all the styles related to the Pets controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-.inline-row {
-  display: inline-block;
+.list {
+  background-color: #232323;
+  margin: 2px;
+  padding: 2px;
 }
 
-.inline-row li {
-  display: inline;
+.list ul {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 550px;
+  margin: 2px;
+  padding: 2px;
+  max-width: 250px;
+}
+
+.pet-entry li {
+  display: block;
+  margin: 2px;
+  padding: 2px;
+  word-wrap: normal;
+}
+
+#profile {
+  height: 145.60px;
+  width: 200px;
 }

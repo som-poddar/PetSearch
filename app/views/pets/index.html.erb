@@ -15,43 +15,29 @@ total <%= @pets.size %> pets found
 	      Sort by species
 	    </button>
     <ul class="list">
-    	<ul class="list-headers">
-    		<li><h2>Name</h2></li>
-    		<li><h2>Age</h2></li>
-    		<li><h2>Size</h2></li>
-    		<li><h2>Status</h2></li>
-    		<li><h2>Org Name</h2></li>
-    		<li><h2>Housebroken?</h2></li>
-    		<li><h2>Housetrained?</h2></li>
-    		<li><h2>Hypoallergenic?</h2></li>
-    		<li><h2>Tail</h2></li>
-    		<li><h2>Color</h2></li>
-    		<li><h2>Breed</h2></li>
-    		<li><h2>Hair Length</h2></li>
-    		<li><h2>Full Profile</h2></li>
-    	</ul>
 			<%= @pets.each do |pet| %>
-				<ul class="inline-row">
-					<li class="name">	 <%= pet.name %> </li>
-					<li class="age"> <%= pet.age %> </li>
-					<li class="size"> <%= pet.size %> </li>
-					<li class="species"> <%= pet.species %> </li>
-					<li class=""> <%= pet.status %> </li>
-					<li class=""> <%= pet.organization_name%> </li>
-					<li class=""> <%= pet.is_housebroken %> </li>
-					<li class=""> <%= pet.is_housetrained %> </li>
-					<li class=""> <%= pet.is_hypoallergenic %> </li>
-					<li class=""> <%= pet.tail %> </li>
-					<li class=""> <%= pet.color %> </li>
-					<li class=""> <%= pet.primary_breed %> - <%= pet.secondary_breed %> </li>
-					<li class=""> <%= pet.hair_length %> </li>
-					<li class=""> <%= pet.contact_street_address %> </li>
-					<li class=""> <%= pet.contact_city %> </li>
-					<li class=""> <%= pet.contact_state %> </li>
-					<li class=""> <%= pet.contact_zipcode %> </li>
-					<li class=""> <%= pet.contact_phone %> </li>
-					<li class=""> <%= pet.contact_fax %> </li>
-					<li class=""> <%= pet.contact_email %> </li>
+				<ul class="pet-entry">
+					<li>
+						<% if pet.species == "Cat" %>
+							<%= image_tag "cat-profile.jpg" %>
+						<% else %>
+							<%= image_tag "puppy-profile.jpg" %>
+						<% end %>
+					</li>
+					<li class="name">Hi, I'm <strong><%= pet.name %></strong> </li>
+					<li class="age">Age: <%= pet.age %> </li>
+					<li class="size">Size: <%= pet.size %> </li>
+					<li class="species">Species: <%= pet.species %> </li>
+					<li class=""> Status: <%= pet.status %> </li>
+					<li class=""> Org: <%= pet.organization_name%> </li>
+					<li class=""> Housebroken? <%= pet.is_housebroken %> </li>
+					<li class=""> Housetrained? <%= pet.is_housetrained %> </li>
+					<li class=""> Hypoallergenic? <%= pet.is_hypoallergenic %> </li>
+					<li class=""> Color: <%= pet.color %> </li>
+					<li class=""> Breed(s): <%= pet.primary_breed %> - <%= pet.secondary_breed %> </li>
+					<li class=""> Hair: <%= pet.hair_length %> </li>
+					<li class=""> City: <%= pet.contact_city %> </li>
+
 					<li class=""><%= link_to 'profile', pet %> </li>
 				</ul>
 			<% end %>
