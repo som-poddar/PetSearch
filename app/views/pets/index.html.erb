@@ -1,19 +1,21 @@
 <h1>Pets</h1>
 total <%= @pets.size %> pets found
 	<div id="pet-list">
-	    <input class="search" placeholder="Search" />
-	    <button class="sort" data-sort="name">
-	      Sort by name
-	    </button>
-	    <button class="sort" data-sort="age">
-	      Sort by age
-	    </button>
-	    <button class="sort" data-sort="size">
-	      Sort by size
-	    </button>
-	    <button class="sort" data-sort="species">
-	      Sort by species
-	    </button>
+		<div class="tools">
+		    <input class="search" placeholder="Search" />
+		    <button class="sort" data-sort="name">
+		      Sort by name
+		    </button>
+		    <button class="sort" data-sort="age">
+		      Sort by age
+		    </button>
+		    <button class="sort" data-sort="size">
+		      Sort by size
+		    </button>
+		    <button class="sort" data-sort="species">
+		      Sort by species
+		    </button>
+		  </div>
     <ul class="list">
 			<%= @pets.each do |pet| %>
 				<ul class="pet-entry">
@@ -24,7 +26,7 @@ total <%= @pets.size %> pets found
 							<%= image_tag "puppy-profile.jpg" %>
 						<% end %>
 					</li>
-					<li class="name">Hi, I'm <strong><%= pet.name %></strong> </li>
+					<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
 					<li class="age">Age: <%= pet.age %> </li>
 					<li class="size">Size: <%= pet.size %> </li>
 					<li class="species">Species: <%= pet.species %> </li>

@@ -1,17 +1,45 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
+
+ *{
+  border: 1px solid red;
+ }
+
+ body {
+  max-width: 2000px;
+ }
+
+ #pet-list {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+}
+
+.tools {
+  display: inline-block;
+  width: 100%;
+}
+
 .list {
   background-color: #232323;
+  display: inline-block;
   margin: 2px;
   padding: 2px;
+  max-height: 10000px;
+  max-width: 700px;
 }
 
 .list ul {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  height: 550px;
-  margin: 2px;
+  margin: 2px auto;
   padding: 2px;
-  max-width: 250px;
+  width: 32.33%;
 }
 
 .pet-entry li {
