@@ -62,6 +62,7 @@ button {
   position: relative;
   top: 0;
   width: 30.33%;
+  vertical-align: top;
 }
 
 .pet-entry li {

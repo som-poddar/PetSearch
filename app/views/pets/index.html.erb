@@ -21,7 +21,6 @@
     <ul class="list">
 			<%= @pets.each do |pet| %>
 				<ul class="pet-entry">
-					<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
 					<li>
 						<div id="profile">
 							<% if pet.species == "Cat" %>
@@ -31,6 +30,7 @@
 							<% end %>
 						</div>
 					</li>
+					<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
 					<li class="age">Age: <%= pet.age %> </li>
 					<li class="size">Size: <%= pet.size %> </li>
 					<li class="species">Species: <%= pet.species %> </li>
