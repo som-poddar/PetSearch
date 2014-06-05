@@ -30,38 +30,16 @@
   margin: 2px;
   padding: 2px;
   max-height: 10000px;
-  max-width: 900px;
+  width: 65%;
 }
 
 .list ul {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  margin: 6px 12px;
+  margin: 6px auto;
   padding: 2px;
   position: relative;
-  box-align: start;
-
-  /* Internet Explorer 10 */
-  display:-ms-flexbox;
-  -ms-flex-pack:start;
-  -ms-flex-align:start;
-
-  /* Firefox */
-  display:-moz-box;
-  -moz-box-pack:start;
-  -moz-box-align:start;
-
-  /* Safari, Chrome, and Opera */
-  display:-webkit-box;
-  -webkit-box-pack:start;
-  -webkit-box-align:start;
-
-  /* W3C */
-  display:box;
-  box-pack:start;
-  box-align:start;
-
   top: 0;
   width: 30.33%;
 }
@@ -71,16 +49,20 @@
   margin: 2px;
   padding: 2px;
   word-wrap: normal;
+  width: 100%;
 }
 
 #profile {
   background-color: white;
   display: block;
   height: 170px;
+  margin: 2px auto;
   width: 210px;
 }
 
 #profile img {
+  display: block;
   padding: 0;
   margin: 0 auto;
+  width: 200px;
 }

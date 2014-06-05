@@ -19,6 +19,7 @@ total <%= @pets.size %> pets found
     <ul class="list">
 			<%= @pets.each do |pet| %>
 				<ul class="pet-entry">
+					<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
 					<li>
 						<div id="profile">
 							<% if pet.species == "Cat" %>
@@ -26,9 +27,8 @@ total <%= @pets.size %> pets found
 							<% else %>
 								<%= image_tag "puppy-profile.jpg" %>
 							<% end %>
-					</div>
+						</div>
 					</li>
-					<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
 					<li class="age">Age: <%= pet.age %> </li>
 					<li class="size">Size: <%= pet.size %> </li>
 					<li class="species">Species: <%= pet.species %> </li>
@@ -46,7 +46,6 @@ total <%= @pets.size %> pets found
 				</ul>
 			<% end %>
 		</ul>
-
 	</div>
 
 <%= link_to 'New Pet', new_pet_path %>
