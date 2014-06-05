@@ -30,16 +30,40 @@
   margin: 2px;
   padding: 2px;
   max-height: 10000px;
-  max-width: 700px;
+  max-width: 900px;
 }
 
 .list ul {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  margin: 2px auto;
+  margin: 6px 12px;
   padding: 2px;
-  width: 32.33%;
+  position: relative;
+  box-align: start;
+
+  /* Internet Explorer 10 */
+  display:-ms-flexbox;
+  -ms-flex-pack:start;
+  -ms-flex-align:start;
+
+  /* Firefox */
+  display:-moz-box;
+  -moz-box-pack:start;
+  -moz-box-align:start;
+
+  /* Safari, Chrome, and Opera */
+  display:-webkit-box;
+  -webkit-box-pack:start;
+  -webkit-box-align:start;
+
+  /* W3C */
+  display:box;
+  box-pack:start;
+  box-align:start;
+
+  top: 0;
+  width: 30.33%;
 }
 
 .pet-entry li {
@@ -50,6 +74,13 @@
 }
 
 #profile {
-  height: 145.60px;
-  width: 200px;
+  background-color: white;
+  display: block;
+  height: 170px;
+  width: 210px;
+}
+
+#profile img {
+  padding: 0;
+  margin: 0 auto;
 }
