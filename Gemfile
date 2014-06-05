@@ -44,3 +44,13 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+group :development do
+  gem 'binding_of_caller'
+  gem 'better_errors'
+end
+
+group :development, :test do
+  gem 'listjs-rails'
+  gem 'faker'
+  gem 'cool_faker'
+end

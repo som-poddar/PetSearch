@@ -1,65 +1,75 @@
-<h1>Pets</h1>
-total <%= @pets.size %> pets found
-<table>
-	<thead>
-		<tr>
-			<th>name</th>
-			<th>age</th>
-			<th>size</th>
-			<th>gender</th>
-			<th>size</th>
-			<th>species</th>
-			<th>status</th>
-			<th>organization_name</th>
-			<th>is_housebroken</th>
-			<th>is_housetrained</th>
-			<th>is_hypoallergenic</th>
-			<th>tail</th>
-			<th>color</th>
-			<th>breed</th>			
-			<th>hair_length</th>
-			<th>street_address</th>
-			<th>city</th>
-			<th>state</th>
-			<th>zipcode</th>
-			<th>phone</th>
-			<th>fax</th>
-			<th>email</th>		
-		</tr>
-	</thead>
-
-	<tbody>
-		<% @pets.each do |pet| %>
-		<tr>
-			<td><%= pet.name %></td>
-			<td><%= pet.age %></td>
-			<td><%= pet.size %></td>
-			<td><%= pet.gender %> </td>
-			<td><%= pet.size %> </td>
-			<td><%= pet.species %> </td>
-			<td><%= pet.status   %> </td>
-			<td><%= pet.organization_name %> </td>
-			<td><%= pet.is_housebroken %> </td>
-			<td><%= pet.is_housetrained %> </td>
-			<td><%= pet.is_hypoallergenic %> </td>
-			<td><%= pet.tail %> </td>
-			<td><%= pet.color %> </td>
-			<td><%= pet.primary_breed %> - <%= pet.secondary_breed %></td>			
-			<td><%= pet.hair_length %> </td>
-			<td><%= pet.contact_street_address %> </td>
-			<td><%= pet.contact_city %> </td>
-			<td><%= pet.contact_state %> </td>
-			<td><%= pet.contact_zipcode %> </td>
-			<td><%= pet.contact_phone %> </td>
-			<td><%= pet.contact_fax %> </td>
-			<td><%= pet.contact_email %> </td>
-			<td></td>
-			<td><%= link_to 'profile', pet %></td>
-		</tr>
-		<% end %>
-	</tbody>
-</table>
-
+<div id="pet-list">
+	<div class="list-tools">
+		<h1>Find Your New Best Friend</h1>
+		<div class="tools">
+		  <input class="search" placeholder="Search" /><br>
+			<span class="section">
+		    <input type="radio" id="radio1" name="age" value="Young">
+		    <label for="radio1">Young</label>
+		    <input type="radio" id="radio2" name="age" value="Adult">
+		    <label for="radio2">Adult</label>
+		    <input type="radio" id="radio3" name="age" value="Senior">
+		    <label for="radio3">Senior</label>
+			</span>
+	    <span class="section">
+		    <input type="radio" id="radio4" name="size" value="Small">
+		    <label for="radio3">Small</label>
+		    <input type="radio" id="radio5" name="size" value="M">
+		    <label for="radio3">Medium</label>
+		    <input type="radio" id="radio6" name="size" value="L">
+		    <label for="radio3">Large</label>
+    	</span>
+    	<span class="section">
+		    <input type="radio" id="radio7" name="species" value="Dog">
+		    <label for="radio3">Cat</label>
+		    <input type="radio" id="radio8" name="species" value="Cat">
+		    <label for="radio3">Dog</label>
+		  </span>
 <br>
+	    <button class="sort" data-sort="name">
+	      Sort by name
+	    </button>
+	    <button class="sort" data-sort="age">
+	      Sort by age
+	    </button>
+	    <button class="sort" data-sort="size">
+	      Sort by size
+	    </button>
+	    <button class="sort" data-sort="species">
+	      Sort by species
+	    </button>
+	  </div>
+	</div>
+  <ul class="list">
+		<%= @pets.each do |pet| %>
+			<ul class="pet-entry">
+					<div id="profile">
+						<% if pet.species == "Cat" %>
+							<%= image_tag "cat-profile.jpg" %>
+						<% else %>
+							<%= image_tag "puppy-profile.jpg" %>
+						<% end %>
+					</div>
+				<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
+				<li class="age">Age: <%= pet.age %> </li>
+				<li class="size">Size: <%= pet.size %> </li>
+				<li class="species">Species: <%= pet.species %> </li>
+				<li class=""> Status: <%= pet.status %> </li>
+				<li class=""> Organization: <%= pet.organization_name%> </li>
+				<li class=""> Housebroken? <%= pet.is_housebroken %> </li>
+				<li class=""> Housetrained? <%= pet.is_housetrained %> </li>
+				<li class=""> Hypoallergenic? <%= pet.is_hypoallergenic %> </li>
+				<li class=""> Color: <%= pet.color %> </li>
+				<li class=""> Breed(s): <%= pet.primary_breed %> - <%= pet.secondary_breed %> </li>
+				<li class=""> Hair: <%= pet.hair_length %> </li>
+				<li class=""> City: <%= pet.contact_city %> </li>
 
-<%= link_to 'New Pet', new_pet_path %>
+				<div class="profile-page"><%= link_to 'View Complete Profile', pet %> </div>
+			</ul>
+		<% end %>
+	</ul>
+	<p><%= link_to 'Add a New Pet', new_pet_path %></p>
+	<ul class="pagination"></ul>
+</div>
+
+
