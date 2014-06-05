@@ -1,4 +1,6 @@
 PetSearch::Application.routes.draw do
+  root 'pets#index'
+
   resources :pets
 
   # The priority is based upon order of creation: first created -> highest priority.
