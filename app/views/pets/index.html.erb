@@ -15,9 +15,23 @@ total <%= @pets.size %> pets found
 	      Sort by species
 	    </button>
     <ul class="list">
-			<%= @pets.each_with_index do |pet, index| %>
+    	<ul class="list-headers">
+    		<li><h2>Name</h2></li>
+    		<li><h2>Age</h2></li>
+    		<li><h2>Size</h2></li>
+    		<li><h2>Status</h2></li>
+    		<li><h2>Org Name</h2></li>
+    		<li><h2>Housebroken?</h2></li>
+    		<li><h2>Housetrained?</h2></li>
+    		<li><h2>Hypoallergenic?</h2></li>
+    		<li><h2>Tail</h2></li>
+    		<li><h2>Color</h2></li>
+    		<li><h2>Breed</h2></li>
+    		<li><h2>Hair Length</h2></li>
+    		<li><h2>Full Profile</h2></li>
+    	</ul>
+			<%= @pets.each do |pet| %>
 				<ul class="inline-row">
-					<%= index %>
 					<li class="name">	 <%= pet.name %> </li>
 					<li class="age"> <%= pet.age %> </li>
 					<li class="size"> <%= pet.size %> </li>
@@ -38,7 +52,7 @@ total <%= @pets.size %> pets found
 					<li class=""> <%= pet.contact_phone %> </li>
 					<li class=""> <%= pet.contact_fax %> </li>
 					<li class=""> <%= pet.contact_email %> </li>
-					<li class=""> link_to 'profile', pet </li>
+					<li class=""><%= link_to 'profile', pet %> </li>
 				</ul>
 			<% end %>
 		</ul>
