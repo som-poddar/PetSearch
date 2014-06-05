@@ -4,10 +4,6 @@
   box-sizing: border-box;
  }
 
- *{
-  border: 1px solid red;
- }
-
  body {
   font-family: "Open Sans", sans-serif;
   max-width: 2000px;
@@ -57,6 +53,7 @@ button {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
+  height: 600px;
   margin: 6px auto;
   padding: 2px;
   position: relative;
