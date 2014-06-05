@@ -1,53 +1,55 @@
-<h1>Pets</h1>
-<p>total <%= @pets.size %> pets found</p>
-<p><%= link_to 'New Pet', new_pet_path %></p>
-	<div id="pet-list">
+<div id="pet-list">
+	<div class="list-tools">
+		<h1>Pets</h1>
+		<p>total <%= @pets.size %> pets found</p>
+		<p><%= link_to 'New Pet', new_pet_path %></p>
 		<div class="tools">
-		    <input class="search" placeholder="Search" />
-		    <br>
-		    <button class="sort" data-sort="name">
-		      Sort by name
-		    </button>
-		    <button class="sort" data-sort="age">
-		      Sort by age
-		    </button>
-		    <button class="sort" data-sort="size">
-		      Sort by size
-		    </button>
-		    <button class="sort" data-sort="species">
-		      Sort by species
-		    </button>
-		  </div>
-    <ul class="list">
-			<%= @pets.each do |pet| %>
-				<ul class="pet-entry">
-					<li>
-						<div id="profile">
-							<% if pet.species == "Cat" %>
-								<%= image_tag "cat-profile.jpg" %>
-							<% else %>
-								<%= image_tag "puppy-profile.jpg" %>
-							<% end %>
-						</div>
-					</li>
-					<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
-					<li class="age">Age: <%= pet.age %> </li>
-					<li class="size">Size: <%= pet.size %> </li>
-					<li class="species">Species: <%= pet.species %> </li>
-					<li class=""> Status: <%= pet.status %> </li>
-					<li class=""> Org: <%= pet.organization_name%> </li>
-					<li class=""> Housebroken? <%= pet.is_housebroken %> </li>
-					<li class=""> Housetrained? <%= pet.is_housetrained %> </li>
-					<li class=""> Hypoallergenic? <%= pet.is_hypoallergenic %> </li>
-					<li class=""> Color: <%= pet.color %> </li>
-					<li class=""> Breed(s): <%= pet.primary_breed %> - <%= pet.secondary_breed %> </li>
-					<li class=""> Hair: <%= pet.hair_length %> </li>
-					<li class=""> City: <%= pet.contact_city %> </li>
-
-					<li class=""><%= link_to 'profile', pet %> </li>
-				</ul>
-			<% end %>
-		</ul>
+	    <input class="search" placeholder="Search" />
+	    <br>
+	    <button class="sort" data-sort="name">
+	      Sort by name
+	    </button>
+	    <button class="sort" data-sort="age">
+	      Sort by age
+	    </button>
+	    <button class="sort" data-sort="size">
+	      Sort by size
+	    </button>
+	    <button class="sort" data-sort="species">
+	      Sort by species
+	    </button>
+	  </div>
 	</div>
+  <ul class="list">
+		<%= @pets.each do |pet| %>
+			<ul class="pet-entry">
+				<li>
+					<div id="profile">
+						<% if pet.species == "Cat" %>
+							<%= image_tag "cat-profile.jpg" %>
+						<% else %>
+							<%= image_tag "puppy-profile.jpg" %>
+						<% end %>
+					</div>
+				</li>
+				<li class="name"><h3>Hi, I'm <strong><%= pet.name %></strong></h3> </li>
+				<li class="age">Age: <%= pet.age %> </li>
+				<li class="size">Size: <%= pet.size %> </li>
+				<li class="species">Species: <%= pet.species %> </li>
+				<li class=""> Status: <%= pet.status %> </li>
+				<li class=""> Org: <%= pet.organization_name%> </li>
+				<li class=""> Housebroken? <%= pet.is_housebroken %> </li>
+				<li class=""> Housetrained? <%= pet.is_housetrained %> </li>
+				<li class=""> Hypoallergenic? <%= pet.is_hypoallergenic %> </li>
+				<li class=""> Color: <%= pet.color %> </li>
+				<li class=""> Breed(s): <%= pet.primary_breed %> - <%= pet.secondary_breed %> </li>
+				<li class=""> Hair: <%= pet.hair_length %> </li>
+				<li class=""> City: <%= pet.contact_city %> </li>
+
+				<li class=""><%= link_to 'profile', pet %> </li>
+			</ul>
+		<% end %>
+	</ul>
+</div>
 
 
