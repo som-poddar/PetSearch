@@ -1,8 +1,10 @@
 <h1>Pets</h1>
-total <%= @pets.size %> pets found
+<p>total <%= @pets.size %> pets found</p>
+<p><%= link_to 'New Pet', new_pet_path %></p>
 	<div id="pet-list">
 		<div class="tools">
 		    <input class="search" placeholder="Search" />
+		    <br>
 		    <button class="sort" data-sort="name">
 		      Sort by name
 		    </button>
@@ -48,5 +50,4 @@ total <%= @pets.size %> pets found
 		</ul>
 	</div>
 
-<%= link_to 'New Pet', new_pet_path %>
 

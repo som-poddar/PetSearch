@@ -1,0 +1,25 @@
+<header id="header">
+  <div class="header-holder">
+    <div class="header-frame">
+      <div class="header-info">
+        <strong class="logo"><%= link_to "http://www.petstablished.com/#" %></strong>
+        <div class="social-networks">
+          <strong class="title">Sniff Us Out</strong>
+          <ul>
+            <li><%= image_tag "facebook.png" %></li>
+            <li class="twitter"><%= image_tag "twitter.png" %></li>
+            <li class="instagram"><%= image_tag "flickr.png" %></li>
+            <!--<li class="youtube"><a href="http://vimeo.com/petstablished" target="_blank">youtube</a></li>-->
+          </ul>
+        </div>
+      </div>
+      <h1 style="text-shadow:1px 1px 6px black">Petstablished!</h1>
+      <p style="font-size:24px;text-shadow:1px 1px 6px black">Helping you manage your organization, so you can spend more time saving pets! </p>
+      <div class="btn-area">
+        <%= link_to "Sign Up", "http://www.petstablished.com/signups/new", class: "btn btn-demo" %>
+        <%= link_to "Newsletter", "http://www.petstablished.com/newsletters/new", class: "btn btn-demo" %>
+      </div>
+    </div>
+  </div>
+  <%= image_tag "header-bg.jpg", class: "main-img" %>
+</header>
